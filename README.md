@@ -5,25 +5,25 @@
 >*简单的一个学习笔记，详细的教学可以看上面的链接，基本上学会这些就能正常使用 `git` 了。*
 #### 1. 创建版本库
 ```
-    mkdir test
+mkdir test
 
-    cd test
+cd test
 
-    # 显示当前目录
-    pwd  
+# 显示当前目录
+pwd  
 
-    # 初始化当前目录为git仓库，会有一个隐藏的 .git 目录（用于跟踪管理版本库，不要去改它）
+# 初始化当前目录为git仓库，会有一个隐藏的 .git 目录（用于跟踪管理版本库，不要去改它）
 git init 
 ```
 
 #### 2. 添加、提交文件（要先 `add`，再 `commit`）
 ```
-    # 创建一个文件（<fileName>） 内容随意
+# 创建一个文件（<fileName>） 内容随意
     
-    # 把文件加入到 git 中（相当于 svn 的添加）
+# 把文件加入到 git 中（相当于 svn 的添加）
 git add <fileName>  
 
-    # 提交文件到仓库中（相当于 svn 的提交）
+# 提交文件到仓库中（相当于 svn 的提交）
 git commit -m "说明文字" 
 ```
 
@@ -40,8 +40,8 @@ git diff <fileName>
 #### 5.查看修改日志
 ```
 git log
-    # 会多行显示内容，如果希望更加清晰简洁，可以使用 git log --pretty=oneline  
-    # 显示的一长串字符是版本号的意思
+# 会多行显示内容，如果希望更加清晰简洁，可以使用 git log --pretty=oneline  
+# 显示的一长串字符是版本号的意思
 ```
 
 #### 6. 版本回退 
@@ -75,7 +75,7 @@ git checkout -- <fileName>  # 丢弃工作区的修改，checkout 也可以用�
 
 #### 9. 撤销 `add` 而没有 `commit` 的文件
 ```
-  git reset HEAD <fileName> # 将已放入暂存区的文件撤销（撤销 git add 的状态）
+git reset HEAD <fileName> # 将已放入暂存区的文件撤销（撤销 git add 的状态）
 ```
 
 #### 10. 撤销 `commit`
@@ -86,9 +86,9 @@ git reset --hard HEAD^  # 即回退版本
 
 #### 11. 删除文件
 
-   如果是误删了本地文件，可以使用 
+如果是误删了本地文件，可以使用 
 ```
-   git checkout -- <fileName> （从仓库里检出文件）
+git checkout -- <fileName> （从仓库里检出文件）
 ```
 的确要删除的话，使用 `git rm <fileName>` 就可以了（相当于 `add`，之后也需要 `commit`）
 如果删除后，还是提交了也可以恢复，但是会丢失最近一次提交后修改的内容
@@ -116,7 +116,7 @@ git clone https://github.com/<userName>/<repositoryName>.git # clone 项目地�
 * `svn` 的分支切换和创建非常慢。。所以大家都不喜欢用，导致这个强大的功能形同虚设。
 * `git` 的分支切换、创建、删除都是非常快的。
 ```
-   git checkout -b <devName> # 创建一个名为 <devName> 的分支并切换 
+git checkout -b <devName> # 创建一个名为 <devName> 的分支并切换 
 ``` 
 相当于：
 ```
