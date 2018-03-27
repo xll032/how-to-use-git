@@ -154,3 +154,8 @@ git log --graph --pretty=oneline --abbrev-commit  # 查看日志的图形
 ```
 git merge --no-ff -m "merge with no-ff" <devName>
 ```
+* 这样一来，就可以保留分支信息。
+实际开发中应该按照下面几个原则进行：
+* 保证 `master` 的稳定，仅用来发布新版本，平时工作都在 `dev` 上进行
+* `dev` 分支是不稳定的，需要发布版本的时候，将其 `merge` 到 `，master` 上
+* 每一个小伙伴都有自己的分支，需要的时候去主干上合并就可以了
