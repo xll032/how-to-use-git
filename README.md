@@ -203,5 +203,23 @@ git stash apply stash@{0}
 强制删除分支可以使用 `-D` 参数。
 
 #### 19. 多人协作
+多人协作的时候需要把分支推送到远程，有些分支不是多人协作是否推送就随意了。
+```
+git pull # 抓取最新的提交，在本地合并冲突，然后推送
+```
+如果 `pull` 失败了，可以根据 `git` 的提示解决问题。
+多人协作的模式通常是这样的：
+* 首先使用 `git push origin <branchName>` 推送自己的修改
+* 如果推送失败，说明远程有更新的内容，需要用 `git pull` 合并
+* 如果没有冲突或者冲突已解决，再使用一次 `git push` 就可以成功。
 
+如果 `git pull` 提示 `no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令 `git branch --set-upstream <branchName> origin/branch-name`。
+```
+git remote -v # 查看远程库信息
+git push origin <branchName> # 向远程推送分支（远程和本地分支的名称最好一致）
+git checkout -b branch-name origin/branch-name #建立本地分支和远程分支的关联
+git pull # 从远程抓取分支（如有冲突，需要先解决）
+```
+
+#### 20. 标签
  
