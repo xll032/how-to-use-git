@@ -1,4 +1,4 @@
-### Git 学习笔记
+# Git 学习笔记
 
 >*参考教程： [Git教程 - 廖雪峰](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 "https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000")*
 
